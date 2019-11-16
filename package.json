@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ArmFrPl/base-convertor/issues"
   },
-  "homepage": "https://github.com/ArmFrPl/base-convertor#readme"
+  "homepage": "https://github.com/ArmFrPl/base-convertor#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
