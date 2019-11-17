@@ -8,6 +8,8 @@ if(opt === 1){
   console.log(convertToBase(num, 2));
 }else if(opt === 2){
   console.log(convertToBase(num, 16));
+}else if(typeof opt === "number"){
+  console.log("There is no options for that number! ");
 }else{
   console.log("Imported value should be number");
 }
