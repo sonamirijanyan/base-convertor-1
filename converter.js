@@ -24,6 +24,5 @@ let result = '';
 }
 
 module.exports = {
-  convertToBinary,
-  convertToHexa
+  convertToBase
 }
