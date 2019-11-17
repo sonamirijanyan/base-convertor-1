@@ -1,28 +1,42 @@
-function convertToBase(num, base){
+function convertToBinary(num) {
+  let arr = [];
+
+  for (let i = num; i > 0; i = Math.floor(i / 2)){
+    arr.push(i % 2);
+  }
+
+  let result = '';
+  for (let j = arr.length - 1; j >= 0; j--) {
+    result += arr[j];
+  }
+  return result;
+}
+
+function convertToHexa(num) {
 
   if (num < 0) {
     num += 0xFFFFFFFF + 1;
   }
 
   let arr = [];
-  let count = -1;
   let vals = ["A", "B", "C", "D", "E", "F"];
 
-  for(let i = num; i > 0; i = Math.floor(i / base)){
-    if(i % base >= 10) {
-      arr.push(vals[i % base - 10]);
-    } else {
-      arr.push(i % base);
+  for (let i = num; i > 0; i = Math.floor(i / 16)){
+    if(i % 16 >= 10) {
+      arr.push(vals[i % 16 - 10]);
+    }else {
+      arr.push(i % 16);
     }
-    count += 1;
   }
-let result = '';
-  for (let j = count; j >= 0; j--) {
+
+  let result = '';
+  for (let j = arr.length - 1; j >= 0; j--) {
     result += arr[j];
   }
   return result;
 }
 
 module.exports = {
-  convertToBase
+  convertToHexa,
+  convertToBinary
 }
