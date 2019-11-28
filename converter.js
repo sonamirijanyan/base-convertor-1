@@ -28,7 +28,7 @@ function convertToHexa(num) {
       arr.push(i % 16);
     }
   }
-
+}
   let result = '';
   for (let j = arr.length - 1; j >= 0; j--) {
     result += arr[j];
